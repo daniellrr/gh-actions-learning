@@ -8,3 +8,9 @@ jobs:
         uses: actions/checkout@v3
       - name: echo txt file
         run: echo "$(cat hello_world.txt)"
+      - name: setup node ver 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - name: run npm install and build
+        run: npm install && npm run build
